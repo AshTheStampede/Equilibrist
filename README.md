@@ -79,18 +79,3 @@ Run `pip install kaleido==0.2.1` and restart the app.
 
 **Wrong Python version**  
 Make sure you are using Python 3.10 or later: `python --version`
-
----
-
-## Batch processing (optional)
-
-To fit and export all scripts in a folder at once:
-```
-python batch_process.py path/to/scripts/ path/to/output/
-```
-
-## Running tests (optional)
-
-```
-python run_tests.py path/to/scripts/
-```
