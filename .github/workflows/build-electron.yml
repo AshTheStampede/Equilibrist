@@ -127,12 +127,13 @@ jobs:
           $PY -m compileall -q -j 0 electron/python-libs/ Equilibrist/
 
           # Strip test suites, docs, and other files not needed at runtime
+          # NOTE: *.dist-info dirs are kept — they contain package metadata
+          # required by importlib.metadata (streamlit needs this to launch).
           find electron/python-libs/ \( \
             -type d -name "tests" -o \
             -type d -name "test" -o \
             -type d -name "testing" -o \
             -type d -name "__pycache__" -o \
-            -type d -name "*.dist-info" -o \
             -type f -name "*.pyx" -o \
             -type f -name "*.pxd" -o \
             -type f -name "*.c" -o \
